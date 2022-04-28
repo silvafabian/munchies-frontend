@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import "./RecipeCard.css"
 
 const RecipeCard = ({recipe}) => {
-
+  console.log(recipe)
+  const rec = recipe.recipe
 
   return ( 
     <Link
@@ -14,15 +15,15 @@ const RecipeCard = ({recipe}) => {
       <div
         id="recipe-card"
         style={{
-          backgroundImage: `url(${recipe.image})`,
+          backgroundImage: `url(${rec.image})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}>
-        <h2 id="recipe-card-title">{recipe.name}</h2>
+        <h2 id="recipe-card-title">{rec.label}</h2>
         <div id="recipe-card-details">
-          <p id="recipe-category">{recipe.category}</p>
-          <p id="recipe-main-ingredient">{recipe.mainIngredient}</p>
+          <p id="recipe-category">{rec.cuisineType}</p>
+          {/* <p id="recipe-main-ingredient">{recipe.mainIngredient}</p> */}
         </div>
       </div>
     </Link>
