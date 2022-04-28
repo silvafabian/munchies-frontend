@@ -1,10 +1,26 @@
-import styles from './Landing.module.css'
+import './Landing.css'
+import RecipeCard from '../../components/RecipeCard/RecipeCard'
 
-const Landing = ({ user }) => {
+const Landing = ({recipes}) => {
+  
   return (
-    <main className={styles.container}>
-      <h1>hello, {user ? user.name : 'friend'}</h1>
-    </main>
+    <>
+      <main>
+        <h1>All Recipes</h1>
+        {recipes.length ?
+          <div id="recipe-card-container">
+            {recipes.map((recipe, idx) =>
+              <RecipeCard
+                key={idx}
+                recipe={recipe}
+              />
+            )}
+          </div>
+        :
+          <></>
+        }
+      </main>
+    </>
   )
 }
 
