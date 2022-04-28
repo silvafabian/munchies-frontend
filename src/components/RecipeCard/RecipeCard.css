@@ -1,0 +1,54 @@
+#recipe-card {
+  background-color: lightgray;
+  border-radius: 10px;
+  width: 30vw;
+  height: 25vh;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  color: black;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 5px black;
+}
+
+#recipe-card-title {
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 5px 10px;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  font-size: 1.6rem;
+}
+
+#recipe-card-details {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding: 0 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#recipe-card-footer > p {
+  margin: 0;
+}
+
+/* =========== MEDIA QUERIES (LARGE DEVICES) ========== */
+@media screen AND (max-width: 1024px) {
+  #recipe-card {
+    width: 50vw;
+    height: 25vh;
+  }
+}
+
+/* =========== MEDIA QUERIES (XL DEVICES) ========== */
+@media screen AND (max-width: 728px) {
+  #recipe-card {
+    width: 40vw;
+    height: 30vh;
+  }
+}
